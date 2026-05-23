@@ -198,13 +198,19 @@ button:focus-visible {
     flex-direction: column !important;
     gap: 48px !important;
   }
+  .who-section > * {
+    width: 100% !important;
+  }
   .who-grid {
+    display: grid !important;
     grid-template-columns: 1fr 1fr !important;
     gap: 10px !important;
     width: 100% !important;
   }
   .who-grid > div {
-    aspect-ratio: 2/3 !important;
+    position: relative !important;
+    height: 260px !important;
+    aspect-ratio: unset !important;
     margin-top: 0 !important;
   }
   .who-text { padding-top: 0 !important; }
@@ -227,7 +233,8 @@ button:focus-visible {
   }
   .port-grid {
     grid-template-columns: 1fr 1fr !important;
-    grid-auto-rows: 240px !important;
+    grid-auto-rows: 320px !important;
+    gap: 10px !important;
   }
   .port-1, .port-2, .port-3, .port-4, .port-5, .port-6 {
     grid-column: auto !important;

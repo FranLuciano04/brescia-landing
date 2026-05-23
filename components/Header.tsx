@@ -34,16 +34,7 @@ export default function Header() {
         transition: "background 0.3s ease, backdrop-filter 0.3s ease",
       }}
     >
-      <div
-        style={{
-          maxWidth: 1440,
-          margin: "0 auto",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          padding: "22px 60px",
-        }}
-      >
+      <div className="header-inner">
         {/* Logo */}
         <a href="#" aria-label="Brescia Group — inicio">
           <Image
@@ -57,17 +48,7 @@ export default function Header() {
         </a>
 
         {/* Nav desktop */}
-        <nav
-          style={{
-            display: "flex",
-            gap: 38,
-            fontFamily: "var(--f-sans)",
-            fontSize: 13,
-            letterSpacing: "0.02em",
-            color: "var(--b-ink-soft)",
-          }}
-          className="hidden md:flex"
-        >
+        <nav className="header-nav">
           {navLinks.map((l) => (
             <a
               key={l.href}
@@ -86,19 +67,7 @@ export default function Header() {
         </nav>
 
         {/* Status pill */}
-        <div
-          style={{
-            fontFamily: "var(--f-mono)",
-            fontSize: 10,
-            letterSpacing: "0.18em",
-            textTransform: "uppercase",
-            color: "var(--b-ink-mute)",
-            display: "flex",
-            alignItems: "center",
-            gap: 8,
-          }}
-          className="hidden md:flex"
-        >
+        <div className="header-status">
           <span
             className="pulse-dot"
             style={{
@@ -114,16 +83,9 @@ export default function Header() {
 
         {/* Hamburger mobile */}
         <button
-          className="md:hidden"
+          className="header-hamburger"
           aria-label="Abrir menú"
           onClick={() => setMenuOpen(!menuOpen)}
-          style={{
-            background: "none",
-            border: "none",
-            cursor: "pointer",
-            color: "var(--b-ink)",
-            padding: 8,
-          }}
         >
           <span style={{ fontSize: 22 }}>{menuOpen ? "✕" : "☰"}</span>
         </button>

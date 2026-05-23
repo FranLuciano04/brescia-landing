@@ -31,7 +31,10 @@
   --color-b-bordeaux: #B86A7E;
 }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
 
 body {
   background: var(--b-cream);
@@ -39,6 +42,7 @@ body {
   font-family: var(--f-sans);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  overflow-x: hidden;
 }
 
 /* ===== DOT BLINK ===== */
@@ -118,8 +122,50 @@ button:focus-visible {
 }
 .portfolio-card:hover .portfolio-card-img { transform: scale(1.04); }
 
+/* ===== HEADER ===== */
+.header-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 60px;
+}
+.header-nav {
+  display: flex;
+  gap: 38px;
+  font-family: var(--f-sans);
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  color: var(--b-ink-soft);
+}
+.header-status {
+  font-family: var(--f-mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--b-ink-mute);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.header-hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--b-ink);
+  padding: 8px;
+}
+
 /* ===== RESPONSIVE — MOBILE < 768px ===== */
 @media (max-width: 767px) {
+
+  /* Header */
+  .header-inner { padding: 18px 24px; }
+  .header-nav { display: none; }
+  .header-status { display: none; }
+  .header-hamburger { display: block; }
 
   /* Hero */
   .hero-section {

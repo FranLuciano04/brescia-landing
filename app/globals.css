@@ -200,10 +200,12 @@ button:focus-visible {
   }
   .who-grid {
     grid-template-columns: 1fr 1fr !important;
-    gap: 12px !important;
+    gap: 10px !important;
+    width: 100% !important;
   }
   .who-grid > div {
-    aspect-ratio: 4/5 !important;
+    aspect-ratio: 2/3 !important;
+    margin-top: 0 !important;
   }
   .who-text { padding-top: 0 !important; }
 

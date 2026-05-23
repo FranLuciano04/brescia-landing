@@ -162,10 +162,10 @@ button:focus-visible {
 @media (max-width: 767px) {
 
   /* Header */
-  .header-inner { padding: 18px 24px; }
-  .header-nav { display: none; }
-  .header-status { display: none; }
-  .header-hamburger { display: block; }
+  .header-inner { padding: 18px 24px !important; }
+  .header-nav { display: none !important; }
+  .header-status { display: none !important; }
+  .header-hamburger { display: block !important; }
 
   /* Hero */
   .hero-section {
@@ -200,6 +200,10 @@ button:focus-visible {
   }
   .who-grid {
     grid-template-columns: 1fr 1fr !important;
+    gap: 12px !important;
+  }
+  .who-grid > div {
+    aspect-ratio: 4/5 !important;
   }
   .who-text { padding-top: 0 !important; }
 

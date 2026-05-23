@@ -233,6 +233,7 @@ button:focus-visible {
   }
   .port-grid {
     grid-template-columns: 1fr !important;
+    grid-template-rows: unset !important;
     grid-auto-rows: 380px !important;
     gap: 10px !important;
   }
